@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "7bb868ed-8706-481a-aa6d-d4a32fb3408c",
+		"name": "openBootcamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17646287"
+	},
+	"item": [
+		{
+			"name": "Listar Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/demos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"demos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar Todos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/demos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "358"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:03:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nombre\": \"uno\",\n        \"valor\": 0.7408541658419296\n    },\n    {\n        \"nombre\": \"dos\",\n        \"valor\": 0.43630233051839584\n    },\n    {\n        \"nombre\": \"tres\",\n        \"valor\": 0.010166330057365225\n    },\n    {\n        \"nombre\": \"cuatro\",\n        \"valor\": 0.05937457184566741\n    },\n    {\n        \"nombre\": \"cinco\",\n        \"valor\": 0.02484328377236389\n    },\n    {\n        \"nombre\": \"seis\",\n        \"valor\": 0.9624157140531501\n    },\n    {\n        \"nombre\": \"Antonio\",\n        \"valor\": 0.12548422\n    },\n    {\n        \"nombre\": \"Joshua\",\n        \"valor\": 0.4242484514\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Listar Uno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/demos/{{nombre}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"demos",
+						"{{nombre}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar Uno",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/demos/{{nombre}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demos",
+								"{{nombre}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:05:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"uno\",\n    \"valor\": 0.7408541658419296\n}"
+				}
+			]
+		},
+		{
+			"name": "Agregar Uno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Margarita_María\",\r\n    \"valor\": 0.0023135\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/demos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"demos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Agregar Uno",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Margarita_María\",\r\n    \"valor\": 0.0023135\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/demos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Location",
+							"value": "http://localhost:8080/demos/Margarita_Mar%C3%ADa"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:08:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
